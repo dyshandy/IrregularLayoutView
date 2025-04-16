@@ -5,7 +5,10 @@
 ## 功能特点
 - 支持自定义不规则布局
 - 提供灵活的布局参数配置
-
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+![img_3.png](img_3.png)
 ## 安装
 在 `build.gradle.kts` 中添加依赖：
 ```kotlin
