@@ -10,7 +10,6 @@ android {
 
 	defaultConfig {
 		minSdk = 19
-
 		testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 		consumerProguardFiles("consumer-rules.pro")
 	}
@@ -39,8 +38,7 @@ dependencies {
 	implementation("com.yanzhenjie:album:2.1.2")
 }
 
-
-
+val  versions = "1.0.3"
 // 配置发布到 GitHub Packages
 afterEvaluate {
 	publishing {
@@ -50,7 +48,7 @@ afterEvaluate {
 					from(components["release"]) // 发布 release 变体的 AAR
 					groupId = "org.dy"
 					artifactId = "irregularlayoutview"
-					version = "1.0.3"
+					version = versions
 					pom {
 						description.set("`IrregularLayoutView` 是一个 Android 自定义控件模块，用于实现矩形布局 切割－捏合 并选择相册图片填充，缩放。用途，创建自定义moka")
 						url.set("https://github.com/dyshandy/IrregularLayoutView")
@@ -66,5 +64,16 @@ afterEvaluate {
 				}
 			}
 		}
+	}
+}
+
+// 任务：生成或更新 README.md
+tasks.register("updateReadme") {
+	doLast {
+		val version = versions
+		val readmeFile = file("../README.md")
+		val readmeContent = readmeFile.readText()
+		val updatedReadmeContent = readmeContent.replace(Regex("version: \\d+\\.\\d+\\.\\d+"), "version: $version")
+		readmeFile.writeText(updatedReadmeContent)
 	}
 }
