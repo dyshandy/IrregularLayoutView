@@ -27,7 +27,7 @@ version: 1.0.3
 2. 在 `build.gradle.kts` 中添加依赖：
     ```
     dependencies {
-        implementation("org.duanyu:irregularlayoutview:1.0.0")
+        implementation("org.duanyu:irregularlayoutview:1.0.3")
     }
     ```
 
