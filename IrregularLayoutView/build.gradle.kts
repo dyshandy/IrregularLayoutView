@@ -59,8 +59,8 @@ afterEvaluate {
 				name = "GitHubPackages"
 				url = uri("https://maven.pkg.github.com/dyshandy/IrregularLayoutView")
 				credentials {
-					username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_USERNAME")
-					password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+					username = System.getenv("GITHUB_USERNAME")
+					password = System.getenv("GITHUB_TOKEN")
 				}
 			}
 		}

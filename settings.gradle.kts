@@ -42,6 +42,10 @@ dependencyResolutionManagement {
 		maven { setUrl("https://plugins.jetbrains.com/maven") }
 		maven {
 			url = uri("https://maven.pkg.github.com/dyshandy/IrregularLayoutView")
+			credentials {
+				username = System.getenv("GITHUB_USERNAME")
+				password = System.getenv("GITHUB_TOKEN")
+			}
 		}
 	}
 }
