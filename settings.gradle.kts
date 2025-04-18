@@ -10,7 +10,7 @@ pluginManagement {
 		maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
 		maven { setUrl("https://jitpack.io") }
 		maven { setUrl("https://tencent-tds-maven.pkg.coding.net/repository/shiply/repo") }
-		maven { setUrl ("https://mirrors.tencent.com/nexus/repository/maven-public")  }
+		maven { setUrl("https://mirrors.tencent.com/nexus/repository/maven-public") }
 		google {
 			content {
 				includeGroupByRegex("com\\.android.*")
@@ -36,10 +36,13 @@ dependencyResolutionManagement {
 		maven { setUrl("https://maven.aliyun.com/repository/gradle-plugin") }
 		maven { setUrl("https://jitpack.io") }
 		maven { setUrl("https://tencent-tds-maven.pkg.coding.net/repository/shiply/repo") }
-		maven { setUrl ("https://mirrors.tencent.com/nexus/repository/maven-public")  }
+		maven { setUrl("https://mirrors.tencent.com/nexus/repository/maven-public") }
 		google()
 		mavenCentral()
 		maven { setUrl("https://plugins.jetbrains.com/maven") }
+		maven {
+			url = uri("https://maven.pkg.github.com/dyshandy/IrregularLayoutView")
+		}
 	}
 }
 rootProject.name = "IrregularLayoutView"

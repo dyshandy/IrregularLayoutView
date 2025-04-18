@@ -1,7 +1,7 @@
 plugins {
 	alias(libs.plugins.androidLibrary)
 	// 添加 maven-publish 插件
-	id("maven-publish")  // 必需插件‌:ml-citation{ref="3,8" data="citationList"}
+	id("maven-publish")  // 必需插件‌
 }
 
 android {
@@ -22,8 +22,8 @@ android {
 		}
 	}
 	compileOptions {
-		sourceCompatibility = JavaVersion.VERSION_11
-		targetCompatibility = JavaVersion.VERSION_11
+		sourceCompatibility = JavaVersion.VERSION_17
+		targetCompatibility = JavaVersion.VERSION_17
 	}
 	// 配置发布变体
 	publishing {
@@ -50,7 +50,7 @@ afterEvaluate {
 					from(components["release"]) // 发布 release 变体的 AAR
 					groupId = "org.dy"
 					artifactId = "irregularlayoutview"
-					version = "1.0.1"
+					version = "1.0.3"
 					pom {
 						description.set("`IrregularLayoutView` 是一个 Android 自定义控件模块，用于实现矩形布局 切割－捏合 并选择相册图片填充，缩放。用途，创建自定义moka")
 						url.set("https://github.com/dyshandy/IrregularLayoutView")
