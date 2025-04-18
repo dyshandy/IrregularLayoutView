@@ -43,5 +43,5 @@ dependencies {
     androidTestImplementation(libs.androidx.junitExt)
     androidTestImplementation(libs.androidx.espresso)
 //    implementation(project(":IrregularLayoutView"))
-	implementation("org.dy:irregularlayoutview:1.0.1")	
+	implementation("org.dy:irregularlayoutview:1.0.3")	
 }
